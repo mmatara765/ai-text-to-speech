@@ -187,6 +187,9 @@ function App() {
 
           </div>
         </div>
+        <footer>
+        <p class="font-extrabold text-white text-center">© All Rights Reserved | Michael Matara</p>
+        </footer>
       </div>
     </>
   )
