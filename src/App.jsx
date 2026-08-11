@@ -1,7 +1,6 @@
 import{useState, useEffect} from "react";
 
 
-
 function App() {
 
   const[text, setText] = useState("");
@@ -112,13 +111,13 @@ function App() {
           placeholder-gray-400
           focus:outline-none
           focus:ring-2
-          focus:ring-fuchsia-400
+          focus:ring-indigo-400
           transition duration-300
           disabled:opacity-50
           resize-none
           shadow-xl
-          focus:shadow-fuchsia-700/70
-          " placeholder="Enter text to convert to speech... (max 3000  characters)."
+          focus:shadow-indigo-700/70
+          " placeholder="Paste your text here."
           value={text}
           onChange={(e) => setText(e.target.value)}
           disabled={!aiReady}
@@ -143,7 +142,7 @@ function App() {
             text-white
             font-semibold
             rounded-2xl
-            transition disabled:opacity-50 disabled:cursor-not-allow"
+            transition disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={speakText}
             disabled={!aiReady || loading || !text.trim()}
             >
@@ -192,7 +191,7 @@ function App() {
         </footer>
       </div>
     </>
-  )
+  );
 }
 
 export default App
