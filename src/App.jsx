@@ -63,7 +63,6 @@ function App() {
     }
   }
   return (
-    <>
       <div className="
       min-h-screen 
       bg-gradient-to-br from-rose-950 via-slate-950 to-purple-900
@@ -111,13 +110,13 @@ function App() {
           placeholder-gray-400
           focus:outline-none
           focus:ring-2
-          focus:ring-indigo-400
+          focus:ring-fuchsia-400
           transition duration-300
           disabled:opacity-50
           resize-none
           shadow-xl
-          focus:shadow-indigo-700/70
-          " placeholder="Paste your text here."
+          focus:shadow-fuchsia-700/70
+          " placeholder="Enter text to convert to speech... (max 3000  characters)."
           value={text}
           onChange={(e) => setText(e.target.value)}
           disabled={!aiReady}
@@ -142,7 +141,7 @@ function App() {
             text-white
             font-semibold
             rounded-2xl
-            transition disabled:opacity-50 disabled:cursor-not-allowed"
+            transition disabled:opacity-50 disabled:cursor-not-allow"
             onClick={speakText}
             disabled={!aiReady || loading || !text.trim()}
             >
@@ -157,12 +156,12 @@ function App() {
                   </div>
                 )}
             </button>
-            
+                
             {
               currentAudio && (
                 <button 
                 className="
-                px-6 py-3 
+                flex-1 px-6 py-3 
                 bg-gradient-to-r from-gray-600 to gray-700 
                 hover:opacity-80 
                 text-white 
@@ -190,7 +189,6 @@ function App() {
         <p class="font-extrabold text-white text-center">© All Rights Reserved | Michael Matara</p>
         </footer>
       </div>
-    </>
   );
 }
 
